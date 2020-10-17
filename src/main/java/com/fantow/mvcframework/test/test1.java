@@ -1,25 +1,17 @@
 package com.fantow.mvcframework.test;
 
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import java.net.URL;
+import java.util.Map;
+import java.util.Properties;
 
 public class test1 {
     public static void main(String[] args) {
-        Object1 obj = new Object1();
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        applicationContext.addBeanFactoryPostProcessor(null);
 
-//        System.out.println(obj.name);
-//        System.out.println(obj.object);
-//
-//        Object string = new String("123");
-//        Class<?> aClass = string.getClass();
-//        System.out.println(aClass);
+        System.out.println("1231231");
     }
-}
-
-class Object1{
-
-    String name;
-
-    Object object;
-
 }
